@@ -8,6 +8,9 @@ edition = "2021"
 repository = "https://github.com/facebook/pyre-check/tree/main/pyre2"
 license = "MIT"
 
+[lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(fbcode_build)'] }
+
 [[bin]]
 name = "pyre2"
 path = "bin/main.rs"
